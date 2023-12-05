@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>validation form</title>
+<script>
+function validation(){
+      var firstname=document.myform.firstname.value;
+      var lastname=document.myform.lastname.value;    
+      var password=document.myform.password.value; 
+      var email=document.myform.email.value;
+      var address=document.myform.address.value;    
+      var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+      if (firstname==null || firstname=="")
+      {  
+  	alert("First Name can't be blank");  
+        return false;  
+}
+else if(lastname==null || lastname=="")
+{  
+  alert("Last Name can't be blank");  
+  return false;  
+}
+else if(address==null || address=="")
+{  
+  alert("Address can't be blank");  
+  return false;  
+}
+else if(password.length<6)
+{  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  } 
+else if(number.value.length != 10)
+{
+alert("Invalid mobile number");
+return false;
+} 
+else if(document.myform.email.value.match(mailformat))
+{
+document.myform.email.focus();
+return true;
+}
+else
+{
+alert("Invalid email address.");
+document.myform.email.focus();
+return false;
+}
+}  
+</script>
+	
+</head>
+
+<body bgcolor="#85b7c9">
+
+<h2 align="center"><font color="white">STUDENT REGISTRATION FORM</font></h2><hr>
+<form  name="myform" method="post" onsubmit="return validation()" >
+
+<p>
+<label>FIRST NAME : <input type="text" id="name" name="firstname"/></label>
+</p>
+<p>
+<label>LAST NAME : <input type="text" name="lastname"/></label>
+</p>
+
+<p>
+<label>PAASWORD: <input type="password" name="password" /></label>
+</p>
+
+<p>
+<label>ADDRESS : <input type="addressspace" name="address"/></label>
+</p>
+<p>
+<label>EMAIL : <input type="email" name="email" /></label>
+</p>
+<p>
+<label>MOBILE :<input type="number" id="number" name="number"></label>
+<p>
+<label>NATIONALITY : <select>
+<option value="INDIA">INDIA</OPTION>
+<option value="USA">USA</OPTION>
+<option value="CANADA">CANADA</option>
+</select>
+</p>
+<p>
+GENDER<BR>
+MALE<input type="radio" id="male" name="Male" value="male" >
+FEMALE<input type="radio" id="female" name="Male" value="male" ><br><br></p>
+<p>DATE OF BIRTH<input type="date" id="birthday" name="birthday"><br><br></p>
+<p>UPLOAD FILE :<input type="file" size="12"></p><br>
+<p>HOBBY :<br>
+  <input type="checkbox" name="football1" value="football">
+  <label for="games1"> Plays football</label><br>
+  <input type="checkbox" name="football1" value="football">
+  <label for="games2"> plays cricket</label><br>
+  <input type="checkbox" name="cricket1" value="cricket" checked>
+  <label for="games3"> plays badminton</label><br><br></p>
+<p>
+<button type="submit">SUBMIT</button>
+<button type="reset" value="clear">RESET</button>
+</p>
+<p>
+</form>	
+</body>
+</html>
+
