@@ -1,0 +1,78 @@
+<html>
+<head>
+</head>
+<body>
+<body bgcolor="#e2faa0">
+<form name ="examForm" onsubmit="return exam()" method="get">
+<center><u><h2>ONLINE EXAM FORM</center></u></h2>
+Enter your name :<input type="text" name="name"><br><br>
+Roll No :<input type="number" name="number">
+<p><h3>1) What is the full form of OTP?</h3>
+<input type="radio" name="one" value="(A) One the phone">(A) One the phone<br>
+<input type="radio" name="one" value="(B) One Time Password">(B) One Time Password<br>
+<input type="radio" name="one" value="(C) Out to practice">(C) Out to practice<br>
+<input type="radio" name="one" value="(D) One Time Programmable">(D) One Time Programmable<br>
+</p>
+
+<p><h3>2)Which is not a type of secondary memory?</h3>
+<input type="radio" name="two" value="(A) Solid State Drive">(A) Solid State Drive<br>
+<input type="radio" name="two" value="(B) Hard Disk">(B) Hard Disk<br>
+<input type="radio" name="two" value="(C) Random Access Memory">(C) Random Access Memory<br>
+<input type="radio" name="two" value=" (D) USB Pen Drive"> (D) USB Pen Drive<br>
+</p>
+
+
+<p><h3>3)Examples of social networking sites are?</h3>
+<input type="radio" name="three" value="(A) Facebook">(A) Facebook<br>
+<input type="radio" name="three" value="(B) Twitter">(B) Twitter<br>
+<input type="radio" name="three" value="(C) Instagram">(C) Instagram<br>
+<input type="radio" name="three" value="(D) all of the above">(D) all of the above<br>
+</p>
+<p><h3>4)Benefits of Email are?</h3>
+<input type="radio" name="four" value="(A) Speed">(A) Speed</h3><br>
+<input type="radio" name="four" value="(B) Cost">(B) Cost<br>
+<input type="radio" name="four" value="(C) Record Keeping">(C) Record Keeping<br>
+<input type="radio" name="four" value="(D) All of the Above">(D) All of the Above<br>
+</p>
+
+<p><h3>5)What is the full form of CPU?</h3><br>
+<input type="radio" name="five" value="A) Computer Processing Unit">A) Computer Processing Unit<br>
+<input type="radio" name="five" value="B) Computer Principle Unit">B) Computer Principle Unit<br>
+<input type="radio" name="five" value="C) Central Processing Unit">C) Central Processing Unit<br>
+<input type="radio" name="five" value="D) Control Processing Unit">D) Control Processing Unit<br>
+</p>
+<p>
+<p><h4>6)Which of the following is not an input device</h3><br>
+<input type="radio" name="six" value="A) Mouse">A)Mouse<br>
+<input type="radio" name="six" value="B) Keyboard">B)Keyboard<br>
+<input type="radio" name="six" value="C) VDU">C) VDU<br>
+<input type="radio" name="six" value="D) Light pen">D) light pen<br>
+</p>
+<p>
+<center>
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</center>
+</p>
+<script>
+function exam()
+{
+var m=0;
+if(document.examForm.one.value=="(B) One Time Password")
+m=m+10;
+if(document.examForm.two.value=="(C) Random Access Memory")
+m=m+10;
+if(document.examForm.three.value=="(D) all of the above")
+m=m+10;
+if(document.examForm.four.value=="(D) All of the Above")
+m=m+10;
+if(document.examForm.five.value=="C) Central Processing Unit")
+m=m+10;
+if(document.examForm.six.value=="C) VDU")
+m=m+10;
+alert("Thank you for taking the online exam !! \n your score is : "+m+" out of 60");
+}
+</script>
+</body>
+</html>
+
